@@ -41,7 +41,7 @@ Running with Docker
 
 Run the Docker container:
 
-bash
+
 
     docker run -d -p 8000:8000 my-fastapi-app
 
