@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c2d0dd; /* Light gray background color */
+}
+
+.chat-container {
+    width: 700px; /* Increase width for larger chatbot */
+    height: 700px; /* Increase height for larger chatbot */
+    margin: 30px auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #c0c0c0; /* White background color */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #111111; /* Light gray border bottom */
+    padding-bottom: 10px;
+    background-color: rgb(130, 158, 173);
+    color: rgb(0, 0, 0);
+    
+}
+
+.user-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #eaeaea; /* Light gray border */
+    border-radius: 5px;
+}
+
+.send-button {
+    width: 80px;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #4CAF50; /* Green send button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 18px;
+    }
+    .feedback-button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover {
+background-color: #45a049;
+}
+
+
+.button {
+        padding: 10px 20px;
+        background-color: #337796;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-right: 10px;
+    }
+.button:hover {
+        background-color: #337083;
+    }
