@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Generation Result</title>
+</head>
+<body>
+    <h1>Code Generation Result</h1>
+    <h2>Description:</h2>
+    <p>{{ description }}</p>
+    <h2>Generated Code:</h2>
+    <pre>{{ generated_code }}</pre>
+    <h2>Provide Feedback:</h2>
+    <form action="/feedback/" method="post">
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
