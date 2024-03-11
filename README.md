@@ -8,41 +8,36 @@ This the respository for Technical Assignment for the Senior Machine Learning En
 FastAPI Application
 Overview
 
-This repository contains a FastAPI application that provides [brief description of your application].
+This repository contains a FastAPI application that provides access to the facebook LLM for coding known as codeLama-7b-hf.
 Installation
 
-    Clone the repository:
+    Clone the repository: git clone https://github.com/saad1725/autify-test.git
 
-    bash
+    
 
-git clone <repository-url>
+
 
 Install dependencies:
 
-bash
 
     pip install -r requirements.txt
 
 Usage
 Running with Uvicorn
 
-    Run the FastAPI application with Uvicorn:
-
-    bash
 
     uvicorn main:app --reload
+    
+The application will start running at http://localhost:8000.
 
-    The application will start running at http://localhost:8000.
-
-    Access the API endpoints using a web browser or API client.
+Access the API endpoints using a web browser or API client.
 
 Running with Docker
 
-    Build the Docker image:
+    Build the Docker image: docker build -f codelama-fastapi.Dockerfile -t my-fastapi-app .
 
-    bash
 
-docker build -t my-fastapi-app .
+
 
 Run the Docker container:
 
@@ -52,11 +47,8 @@ bash
 
     The application will start running inside the Docker container and will be accessible at http://localhost:8000.
 
-API Endpoints
 
-    /: [Description of the root endpoint]
-    /endpoint1: [Description of endpoint 1]
-    /endpoint2: [Description of endpoint 2]
-    ...
+
+
 
 
