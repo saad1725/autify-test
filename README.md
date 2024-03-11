@@ -48,6 +48,9 @@ Run the Docker container:
     The application will start running inside the Docker container and will be accessible at http://localhost:8000.
 
 
+The feedback log file can be use to improve the model for future generations. Since the information being saved in the file
+is formatted.
+
 
 
 
