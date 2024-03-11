@@ -105,7 +105,9 @@ async def generate_code_route(description: str = Form(...)):
         return {"message": "Generated code does not meet constraints"}
     
 def validate_code_constraints(code: str) -> bool:
-    #
+    #we can add contraints based on the output of the LLM 
+    #since i am not able to run the LLM on my machine i will not be able to write an example test here.
+    #the pseudo code can be something like this: user can input the output data type or output format and this function will run the code and match the outputs and return a boolean
 
      return True
 
