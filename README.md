@@ -41,12 +41,15 @@ Running with Docker
 
 Run the Docker container:
 
-bash
+
 
     docker run -d -p 8000:8000 my-fastapi-app
 
     The application will start running inside the Docker container and will be accessible at http://localhost:8000.
 
+
+The feedback log file can be use to improve the model for future generations. Since the information being saved in the file
+is formatted.
 
 
 
