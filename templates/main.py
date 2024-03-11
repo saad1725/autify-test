@@ -30,30 +30,30 @@ templates = Jinja2Templates(directory="../templates")
 def generate_code(user_input):
     
 
-    # result=[]
-    # # Tokenize and encode the user input
-    # pipeline = transformers.pipeline(
-    #     "text-generation",
-    #     model=model,
-    #     torch_dtype=torch.float16,
-    #     device_map="auto",
-    # )
+    result=[]
+    # Tokenize and encode the user input
+    pipeline = transformers.pipeline(
+        "text-generation",
+        model=model,
+        torch_dtype=torch.float16,
+        device_map="auto",
+    )
 
-    # sequences = pipeline(
-    #     user_input,
-    #     do_sample=True,
-    #     top_k=10,
-    #     temperature=0.1,
-    #     top_p=0.95,
-    #     num_return_sequences=1,
-    #     eos_token_id=tokenizer.eos_token_id,
-    #     max_length=1024,
-    # )
-    # for seq in sequences:
-    #     # print(f"Result: {seq['generated_text']}")
-    #     result.append(seq['generated_text'])
+    sequences = pipeline(
+        user_input,
+        do_sample=True,
+        top_k=10,
+        temperature=0.1,
+        top_p=0.95,
+        num_return_sequences=1,
+        eos_token_id=tokenizer.eos_token_id,
+        max_length=1024,
+    )
+    for seq in sequences:
+        # print(f"Result: {seq['generated_text']}")
+        result.append(seq['generated_text'])
 
-    return "coding result"  #" ".join(result)
+    return " ".join(result)
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
