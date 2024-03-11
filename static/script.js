@@ -33,7 +33,7 @@ function sendMessage() {
 }
 
 function saveFeedback() {
-    var feedbackInput = prompt("Please enter your feedback:");
+    var feedbackInput = prompt("Please enter your feedback if the given code is : Wrong , Correct");
     if (feedbackInput !== null && feedbackInput.trim() !== "") {
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "/feedback/", true);
