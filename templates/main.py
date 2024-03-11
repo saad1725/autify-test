@@ -14,14 +14,14 @@ tokenizer = AutoTokenizer.from_pretrained(model)
 
 app = FastAPI()
 # Mount a static directory to serve static files like CSS and JavaScript
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="../static"), name="static")
 
 # Define the path to the feedback log file
-log_file = "static/feedback.log"
+log_file = "../static/feedback.log"
 
 
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="../templates")
 
 # Load the fine-tuned GPT-3.5 model and tokenizer
 
@@ -30,28 +30,28 @@ templates = Jinja2Templates(directory="templates")
 def generate_code(user_input):
     
 
-    result=[]
-    # Tokenize and encode the user input
-    pipeline = transformers.pipeline(
-        "text-generation",
-        model=model,
-        torch_dtype=torch.float16,
-        device_map="auto",
-    )
+    # result=[]
+    # # Tokenize and encode the user input
+    # pipeline = transformers.pipeline(
+    #     "text-generation",
+    #     model=model,
+    #     torch_dtype=torch.float16,
+    #     device_map="auto",
+    # )
 
-    sequences = pipeline(
-        user_input,
-        do_sample=True,
-        top_k=10,
-        temperature=0.1,
-        top_p=0.95,
-        num_return_sequences=1,
-        eos_token_id=tokenizer.eos_token_id,
-        max_length=1024,
-    )
-    for seq in sequences:
-        # print(f"Result: {seq['generated_text']}")
-        result.append(seq['generated_text'])
+    # sequences = pipeline(
+    #     user_input,
+    #     do_sample=True,
+    #     top_k=10,
+    #     temperature=0.1,
+    #     top_p=0.95,
+    #     num_return_sequences=1,
+    #     eos_token_id=tokenizer.eos_token_id,
+    #     max_length=1024,
+    # )
+    # for seq in sequences:
+    #     # print(f"Result: {seq['generated_text']}")
+    #     result.append(seq['generated_text'])
 
     return "coding result"  #" ".join(result)
 
@@ -114,6 +114,6 @@ def validate_code_constraints(code: str) -> bool:
 if __name__ == "__main__":
     if not os.path.exists(log_file):
         with open(log_file, "w") as file:
-            pass  
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+            pass
+    # import uvicorn
+    # uvicorn.run(app, host="127.0.0.1", port=8000)

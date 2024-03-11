@@ -1,4 +1,7 @@
 transformers
+torch
+torchaudio
+torchvision
 fastapi
 python-multipart
 uvicorn
